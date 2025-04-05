@@ -1,8 +1,26 @@
 # Configurations
 
+Basic configurations of **MikroTik RouterOS**. 
+
+If you want to explorer another topic [click here](../README.md) to go back.
+
+## Hostname
+
+How to change the **Hostname**.
+
+```rsc
+/system identity set name="ROUTER"
+```
+
+If you want to show a short message for someone are accessing the device, you can enable **Login Banner**.
+
+```rsc
+/system note set show-at-login=yes note="Unauthorized access is prohibited."
+```
+
 ## DHCP Server
 
-A basic setup of DHCP Server.
+A basic setup of **DHCP Server**.
 
 ```rsc
 /ip address add address=192.168.1.1/24 interface=ether1
@@ -19,4 +37,8 @@ A basic setup of DHCP Server.
 3. Create a **DHCP Server** with the interface and the DHCP Pool object.
 4. Define network scope like: **default gateway** and **DNS servers**.
 
+---
 
+### Author
+
+Jonas Lima
